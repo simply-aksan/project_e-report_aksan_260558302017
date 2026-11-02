@@ -3,7 +3,7 @@
 > **Tugas Akhir Project Semester 1 — Program Studi Teknologi Rekayasa Perangkat Lunak (TRPL)**  
 > **Mahasiswa:** Allam Permata Putra  
 > **NIM:** 260558302016  
-> **Repository GitHub:** [https://github.com/allam1768/project-E_Report-260558302016](https://github.com/allam1768/project-E_Report-260558302016)
+> **Repository GitHub:** [https://github.com/simply-aksan/e-report](https://github.com/simply-aksan/e-report)
 
 ---
 
