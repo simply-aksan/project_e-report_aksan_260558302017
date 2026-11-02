@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#2563eb" />
+        <title>Detail Pengaduan · Suara Warga, Langkah Perubahan</title>
+        <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+        <link rel="stylesheet" href="assets/style.css" />
+    </head>
+    <body class="bg-slate-50 font-sans text-slate-900 antialiased">
+        <!-- TEMPLATE HTML STATIS — data contoh, tanpa backend atau JavaScript. -->
+        <a
+            href="#main-content"
+            class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-white focus:p-3"
+        >
+            Langsung ke konten
+        </a>
+
+        <aside
+            class="fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-slate-200 bg-white transition-transform lg:translate-x-0 template-sidebar"
+        >
+            <div class="flex h-23 shrink-0 items-center justify-between px-7">
+                <a
+                    href="landing-page.html"
+                    class="inline-flex items-center gap-2.5 font-display text-xl font-extrabold tracking-tight text-slate-900"
+                >
+                    <span
+                        class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white"
+                    >
+                        <svg
+                            class="h-6 w-6 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path>
+                            <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path>
+                        </svg>
+                    </span>
+                    <span>
+                        E-Report
+                        <span class="text-blue-600">.</span>
+                    </span>
+                </a>
+            </div>
+            <div class="px-4 pt-5">
+                <p class="mb-4 px-4 text-[10px] font-bold tracking-[.18em] text-slate-400">MENU WARGA</p>
+                <nav aria-label="Navigasi utama" class="space-y-1.5">
+                    <a
+                        href="warga-dashboard.html"
+                        aria-current="false"
+                        class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition text-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                    >
+                        <svg
+                            class="h-5 w-5 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                            <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                            <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                            <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+                        </svg>
+                        Dashboard
+                    </a>
+                    <a
+                        href="warga-pengaduan.html"
+                        aria-current="page"
+                        class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition bg-blue-50 text-blue-700"
+                    >
+                        <svg
+                            class="h-5 w-5 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M20 7h-3a2 2 0 0 1-2-2V2"></path>
+                            <path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z"></path>
+                            <path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8"></path>
+                        </svg>
+                        Pengaduan Saya
+                    </a>
+                    <a
+                        href="warga-buat-pengaduan.html"
+                        aria-current="false"
+                        class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition text-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                    >
+                        <svg
+                            class="h-5 w-5 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 12h8"></path>
+                            <path d="M12 8v8"></path>
+                        </svg>
+                        Buat Pengaduan
+                    </a>
+                    <a
+                        href="warga-profil.html"
+                        aria-current="false"
+                        class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition text-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                    >
+                        <svg
+                            class="h-5 w-5 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle cx="12" cy="8" r="5"></circle>
+                            <path d="M20 21a8 8 0 0 0-16 0"></path>
+                        </svg>
+                        Profil Saya
+                    </a>
+                </nav>
+            </div>
+            <div class="mx-5 mt-auto mb-5 rounded-2xl bg-slate-50 p-4">
+                <span
+                    class="mb-3 flex h-9 w-9 items-center justify-center rounded-xl bg-white text-blue-600 shadow-xs"
+                >
+                    <svg
+                        class="h-5 w-5 shrink-0"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                        ></path>
+                        <path
+                            d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"
+                        ></path>
+                        <path d="m18 15-2-2"></path>
+                        <path d="m15 18-2-2"></path>
+                    </svg>
+                </span>
+                <p class="text-sm font-bold">Setiap suara berarti.</p>
+                <p class="mt-2 text-xs leading-5 text-slate-500">
+                    Bersama wujudkan lingkungan yang nyaman untuk semua.
+                </p>
+            </div>
+            <!-- FORM STATIS — tambahkan form dan aksi saat praktik. -->
+            <div class="border-t border-slate-100 p-4">
+                <button
+                    class="flex w-full items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-500 hover:bg-red-50 hover:text-red-600"
+                    type="button"
+                >
+                    <svg
+                        class="h-5 w-5 shrink-0"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" x2="9" y1="12" y2="12"></line>
+                    </svg>
+                    Keluar
+                </button>
+            </div>
+        </aside>
+        <div class="lg:pl-64">
+            <header
+                class="flex h-23 items-center justify-between gap-4 border-b border-slate-200/80 bg-white px-5 sm:px-9"
+            >
+                <div class="flex items-center gap-4">
+                    <div>
+                        <p class="text-sm font-semibold">Detail Pengaduan</p>
+                        <p class="mt-1 hidden text-xs text-slate-400 sm:block">
+                            Layanan pengaduan masyarakat
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span
+                        class="hidden rounded-lg border border-slate-200 px-3 py-2 text-xs text-slate-500 md:inline-flex"
+                    >
+                        26 Oktober 2026
+                    </span>
+                    <span class="mx-2 hidden h-8 w-px bg-slate-100 md:block"></span>
+                    <span
+                        class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-700"
+                    >
+                        R
+                    </span>
+                    <div class="hidden sm:block">
+                        <p class="max-w-40 truncate text-sm font-bold">Rani Putri</p>
+                        <p class="mt-0.5 text-xs text-slate-500">Warga</p>
+                    </div>
+                </div>
+            </header>
+            <details class="template-mobile-menu">
+                <summary>Menu navigasi</summary>
+                <nav aria-label="Navigasi seluler">
+                    <a
+                        href="warga-dashboard.html"
+                        aria-current="false"
+                        class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition text-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                    >
+                        <svg
+                            class="h-5 w-5 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                            <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                            <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                            <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+                        </svg>
+                        Dashboard
+                    </a>
+                    <a
+                        href="warga-pengaduan.html"
+                        aria-current="page"
+                        class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition bg-blue-50 text-blue-700"
+                    >
+                        <svg
+                            class="h-5 w-5 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M20 7h-3a2 2 0 0 1-2-2V2"></path>
+                            <path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z"></path>
+                            <path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8"></path>
+                        </svg>
+                        Pengaduan Saya
+                    </a>
+                    <a
+                        href="warga-buat-pengaduan.html"
+                        aria-current="false"
+                        class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition text-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                    >
+                        <svg
+                            class="h-5 w-5 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 12h8"></path>
+                            <path d="M12 8v8"></path>
+                        </svg>
+                        Buat Pengaduan
+                    </a>
+                    <a
+                        href="warga-profil.html"
+                        aria-current="false"
+                        class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition text-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                    >
+                        <svg
+                            class="h-5 w-5 shrink-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <circle cx="12" cy="8" r="5"></circle>
+                            <path d="M20 21a8 8 0 0 0-16 0"></path>
+                        </svg>
+                        Profil Saya
+                    </a>
+                </nav>
+            </details>
+
+            <main
+                id="main-content"
+                class="mx-auto min-h-[calc(100vh-156px)] max-w-7xl px-5 py-8 sm:px-9 sm:py-10"
+            >
+                <!-- MULAI KONTEN HALAMAN: salin bagian ini ke view halaman. -->
+                <div>
+                    <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                        <div>
+                            <h1
+                                class="font-display text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+                            >
+                                Detail Pengaduan
+                            </h1>
+                            <p class="mt-2 text-sm leading-relaxed text-slate-500">
+                                Pantau dan lihat informasi lengkap pengaduan Anda.
+                            </p>
+                        </div>
+                        <a
+                            href="warga-pengaduan.html"
+                            class="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                        >
+                            <svg
+                                class="h-4 w-4 shrink-0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path d="m12 19-7-7 7-7"></path>
+                                <path d="M19 12H5"></path>
+                            </svg>
+                            Kembali
+                        </a>
+                    </div>
+                    <div class="grid items-start gap-6 lg:grid-cols-[1fr_300px]">
+                        <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                            <div class="border-b border-slate-100 p-6 sm:p-8">
+                                <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+                                    <span class="text-xs font-bold tracking-wider text-slate-400">
+                                        PENGADUAN # 00001
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-semibold bg-amber-50 text-amber-800 ring-1 ring-inset ring-amber-200"
+                                    >
+                                        <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
+                                        Menunggu
+                                    </span>
+                                </div>
+                                <h2 class="font-display text-2xl leading-snug font-bold break-words">
+                                    Lampu jalan mati di RT 03
+                                </h2>
+                                <div class="mt-6 grid gap-4 text-xs text-slate-500 sm:grid-cols-2">
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="h-4 w-4 shrink-0 text-slate-400"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <path d="M8 2v4"></path>
+                                            <path d="M16 2v4"></path>
+                                            <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                            <path d="M3 10h18"></path>
+                                            <path d="M8 14h.01"></path>
+                                            <path d="M12 14h.01"></path>
+                                            <path d="M16 14h.01"></path>
+                                            <path d="M8 18h.01"></path>
+                                            <path d="M12 18h.01"></path>
+                                            <path d="M16 18h.01"></path>
+                                        </svg>
+                                        <span>
+                                            Kejadian:
+                                            <strong class="font-medium text-slate-700">
+                                                25 Oktober 2026
+                                            </strong>
+                                        </span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg
+                                            class="h-4 w-4 shrink-0 text-slate-400"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16.5 12"></polyline>
+                                        </svg>
+                                        <span>Diajukan: 26 Okt 2026, 08:30</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 sm:p-8">
+                                <h3 class="mb-4 text-sm font-bold">Deskripsi Pengaduan</h3>
+                                <p class="text-sm leading-8 break-words whitespace-pre-line text-slate-600">
+                                    Lampu penerangan di Jalan Melati RT 03 tidak menyala sejak kemarin malam.
+                                    Kondisi jalan menjadi gelap dan menyulitkan warga yang melintas. Mohon
+                                    pemeriksaan dan perbaikan pada lampu di dekat pos ronda.
+                                </p>
+                                <h3 class="mt-8 mb-4 text-sm font-bold">Foto Bukti</h3>
+                                <div
+                                    class="flex items-center gap-3 rounded-xl bg-slate-50 p-5 text-sm text-slate-400"
+                                >
+                                    <svg
+                                        class="h-5 w-5 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                        <circle cx="9" cy="9" r="2"></circle>
+                                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+                                    </svg>
+                                    Tidak ada foto bukti dilampirkan.
+                                </div>
+                            </div>
+                        </article>
+                        <aside class="space-y-5">
+                            <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                                <h2 class="font-display font-bold">Progres Pengaduan</h2>
+                                <div class="mt-6 space-y-6">
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600"
+                                        >
+                                            <svg
+                                                class="h-4 w-4 shrink-0"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                aria-hidden="true"
+                                                focusable="false"
+                                            >
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <polyline points="12 6 12 12 16.5 12"></polyline>
+                                            </svg>
+                                        </span>
+                                        <p class="text-xs font-semibold text-slate-700">
+                                            Menunggu Peninjauan
+                                            <span class="mt-1 block text-[10px] font-normal text-blue-600">
+                                                Tahap saat ini
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-50 text-slate-300"
+                                        >
+                                            <svg
+                                                class="h-4 w-4 shrink-0"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                aria-hidden="true"
+                                                focusable="false"
+                                            >
+                                                <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-xs font-semibold text-slate-400">Sedang Diproses</p>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-50 text-slate-300"
+                                        >
+                                            <svg
+                                                class="h-4 w-4 shrink-0"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                aria-hidden="true"
+                                                focusable="false"
+                                            >
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <path d="m9 12 2 2 4-4"></path>
+                                            </svg>
+                                        </span>
+                                        <p class="text-xs font-semibold text-slate-400">Selesai Ditangani</p>
+                                    </div>
+                                </div>
+                                <p class="mt-6 rounded-xl bg-slate-50 p-4 text-xs leading-6 text-slate-500">
+                                    Pengaduan menunggu peninjauan admin.
+                                </p>
+                            </section>
+                            <section class="rounded-2xl border border-slate-200 bg-white p-6">
+                                <h2 class="font-display text-sm font-bold">Kelola Pengaduan</h2>
+                                <p class="mt-2 text-xs leading-6 text-slate-500">
+                                    Anda dapat mengubah informasi selama pengaduan belum diproses.
+                                </p>
+                                <a
+                                    href="warga-edit-pengaduan.html"
+                                    class="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 mt-4 w-full"
+                                >
+                                    <svg
+                                        class="h-4 w-4 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <path
+                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"
+                                        ></path>
+                                        <path d="m15 5 4 4"></path>
+                                    </svg>
+                                    Edit Pengaduan
+                                </a>
+                                <button
+                                    type="button"
+                                    class="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition border border-red-200 bg-red-50 text-red-700 hover:bg-red-100 mt-3 w-full"
+                                >
+                                    <svg
+                                        class="h-4 w-4 shrink-0"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <path d="M3 6h18"></path>
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                        <line x1="10" x2="10" y1="11" y2="17"></line>
+                                        <line x1="14" x2="14" y1="11" y2="17"></line>
+                                    </svg>
+                                    Hapus Pengaduan
+                                </button>
+                            </section>
+                        </aside>
+                    </div>
+                </div>
+                <!-- AKHIR KONTEN HALAMAN -->
+            </main>
+            <footer
+                class="flex flex-wrap justify-between gap-2 border-t border-slate-200 px-5 py-5 text-xs text-slate-400 sm:px-9"
+            >
+                <p>© 2026 E-Report</p>
+                <p>Suara Warga, Langkah Perubahan.</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Semua View E-Report</title>
+        <link rel="icon" href="assets/favicon.svg" />
+        <link rel="stylesheet" href="assets/style.css" />
+    </head>
+    <body class="bg-slate-50 font-sans text-slate-900">
+        <main class="mx-auto max-w-6xl px-6 py-12">
+            <p class="text-xs font-bold tracking-widest text-blue-600">BAHAN PRAKTIK E-REPORT</p>
+            <h1 class="mt-4 text-4xl font-bold tracking-tight">Semua halaman. Siap jadi view.</h1>
+            <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-500">
+                14 halaman utama dan 4 contoh status tambahan. Tampilan mengikuti view proyek E-Report. Semua
+                data merupakan ilustrasi. Tautan berpindah halaman; tombol login, simpan, hapus, dan perubahan
+                status belum memiliki aksi.
+            </p>
+            <div class="my-8 rounded-2xl border border-blue-100 bg-blue-50 p-6">
+                <h2 class="font-bold">Cara pakai saat mengajar</h2>
+                <ol class="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7">
+                    <li>
+                        Buka file HTML yang diperlukan di editor. Semua file dapat dibuka langsung di browser
+                        tanpa server.
+                    </li>
+                    <li>
+                        Untuk halaman warga/admin, cari komentar
+                        <b>MULAI KONTEN HALAMAN</b>
+                        dan
+                        <b>AKHIR KONTEN HALAMAN</b>
+                        . Salin isinya ke Blade halaman; kerangka sidebar dan header bisa dipindahkan ke
+                        layout.
+                    </li>
+                    <li>
+                        Tambahkan form, wire:model, wire:submit, route, dan data dinamis satu per satu saat
+                        praktik. Tombol saat ini memakai type="button".
+                    </li>
+                    <li>
+                        Salin folder assets untuk memakai CSS siap pakai. Class Tailwind tetap dipertahankan
+                        sesuai proyek; CSS ini mencakup class template yang sudah ada.
+                    </li>
+                </ol>
+            </div>
+            <section class="mb-10">
+                <h2 class="mb-4 text-xl font-bold">Halaman publik</h2>
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="landing-page.html"
+                    >
+                        <b class="block text-sm text-blue-700">landing-page.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="login.html"
+                    >
+                        <b class="block text-sm text-blue-700">login.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="register.html"
+                    >
+                        <b class="block text-sm text-blue-700">register.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                </div>
+            </section>
+            <section class="mb-10">
+                <h2 class="mb-4 text-xl font-bold">Halaman warga</h2>
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="warga-dashboard.html"
+                    >
+                        <b class="block text-sm text-blue-700">warga-dashboard.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="warga-pengaduan.html"
+                    >
+                        <b class="block text-sm text-blue-700">warga-pengaduan.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="warga-buat-pengaduan.html"
+                    >
+                        <b class="block text-sm text-blue-700">warga-buat-pengaduan.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="warga-detail-pengaduan.html"
+                    >
+                        <b class="block text-sm text-blue-700">warga-detail-pengaduan.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="warga-edit-pengaduan.html"
+                    >
+                        <b class="block text-sm text-blue-700">warga-edit-pengaduan.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="warga-profil.html"
+                    >
+                        <b class="block text-sm text-blue-700">warga-profil.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                </div>
+            </section>
+            <section class="mb-10">
+                <h2 class="mb-4 text-xl font-bold">Halaman admin</h2>
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="admin-dashboard.html"
+                    >
+                        <b class="block text-sm text-blue-700">admin-dashboard.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="admin-pengaduan.html"
+                    >
+                        <b class="block text-sm text-blue-700">admin-pengaduan.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="admin-detail-pengaduan.html"
+                    >
+                        <b class="block text-sm text-blue-700">admin-detail-pengaduan.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                </div>
+            </section>
+            <section class="mb-10">
+                <h2 class="mb-4 text-xl font-bold">Halaman error</h2>
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="403.html"
+                    >
+                        <b class="block text-sm text-blue-700">403.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="404.html"
+                    >
+                        <b class="block text-sm text-blue-700">404.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                </div>
+            </section>
+            <section class="mb-10">
+                <h2 class="mb-4 text-xl font-bold">Contoh status tambahan</h2>
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="warga-detail-pengaduan-proses.html"
+                    >
+                        <b class="block text-sm text-blue-700">warga-detail-pengaduan-proses.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="warga-detail-pengaduan-selesai.html"
+                    >
+                        <b class="block text-sm text-blue-700">warga-detail-pengaduan-selesai.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="admin-detail-pengaduan-proses.html"
+                    >
+                        <b class="block text-sm text-blue-700">admin-detail-pengaduan-proses.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                    <a
+                        class="rounded-xl border border-slate-200 bg-white p-5 hover:border-blue-400 hover:bg-blue-50"
+                        href="admin-detail-pengaduan-selesai.html"
+                    >
+                        <b class="block text-sm text-blue-700">admin-detail-pengaduan-selesai.html</b>
+                        <span class="mt-2 block text-xs text-slate-500">Buka tampilan →</span>
+                    </a>
+                </div>
+            </section>
+            <p class="text-xs text-slate-500">
+                HTML + CSS + SVG lokal · Tanpa PHP, Blade, Livewire, JavaScript, CDN, atau database pada hasil
+                template.
+            </p>
+        </main>
+    </body>
+</html>
