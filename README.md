@@ -1,9 +1,9 @@
 # E-Report — Sistem Informasi Pengaduan & Layanan Aspirasi Warga
 
 > **Tugas Akhir Project Semester 1 — Program Studi Teknologi Rekayasa Perangkat Lunak (TRPL)**  
-> **Mahasiswa:** Allam Permata Putra  
-> **NIM:** 260558302016  
-> **Repository GitHub:** [https://github.com/simply-aksan/e-report](https://github.com/simply-aksan/e-report)
+> **Mahasiswa:** Fakhriza Aksan Wajdi Zulkarnain 
+> **NIM:** 260558302017  
+> **Repository GitHub:** [https://github.com/simply-aksan/project_e-report_aksan_260558302017](https://github.com/simply-aksan/project_e-report_aksan_260558302017)
 
 ---
 
