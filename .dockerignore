@@ -17,3 +17,4 @@ storage/app/public/*
 public/storage
 public/hot
 .phpunit.result.cache
+
