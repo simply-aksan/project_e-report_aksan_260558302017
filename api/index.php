@@ -17,27 +17,5 @@ foreach ($tmpDirs as $dir) {
     }
 }
 
-// 2. Setup embedded SQLite database if external DB is not configured
-$dbPath = '/tmp/database.sqlite';
-$seedDb = __DIR__ . '/../database/seed.sqlite';
-
-if (!file_exists($dbPath)) {
-    if (file_exists($seedDb)) {
-        @copy($seedDb, $dbPath);
-    } else {
-        @touch($dbPath);
-    }
-}
-
-// Set DB environment variables for Vercel if not already set to an external DB
-if (empty(getenv('DB_HOST')) && (empty(getenv('DB_CONNECTION')) || getenv('DB_CONNECTION') === 'sqlite')) {
-    putenv("DB_CONNECTION=sqlite");
-    putenv("DB_DATABASE={$dbPath}");
-    $_ENV['DB_CONNECTION'] = 'sqlite';
-    $_ENV['DB_DATABASE'] = $dbPath;
-    $_SERVER['DB_CONNECTION'] = 'sqlite';
-    $_SERVER['DB_DATABASE'] = $dbPath;
-}
-
-// 3. Forward request to Laravel public entrypoint
+// 2. Forward request to Laravel public entrypoint
 require __DIR__ . '/../public/index.php';
