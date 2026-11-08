@@ -1,40 +1,33 @@
-FROM php:8.2-fpm-alpine
+FROM php:8.2-cli
 
-# Install system packages & PHP extensions
-RUN apk add --no-cache \
-    nodejs \
-    npm \
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
-    curl \
-    libpng-dev \
-    libjpeg-turbo-dev \
-    freetype-dev \
-    libzip-dev \
-    zip \
     unzip \
-    bash \
-    sqlite \
-    sqlite-dev \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libzip-dev \
+    sqlite3 \
+    libsqlite3-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo pdo_sqlite gd zip pcntl bcmath
+    && docker-php-ext-install -j$(nproc) gd zip pdo pdo_sqlite pcntl bcmath \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-WORKDIR /var/www
+WORKDIR /app
 
-# Copy files
+# Copy application files (including pre-built public/build)
 COPY . .
 
-# Copy environment example to .env if not exists for build step
-RUN if [ ! -f .env ]; then cp .env.example .env; fi \
+# Run composer with scripts disabled first to prevent any artisan crash, then dump-autoload
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --no-scripts \
     && touch database/database.sqlite \
-    && composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader \
-    && npm install \
-    && npm run build \
-    && chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache /var/www/database \
-    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache /var/www/database
+    && chmod -R 777 storage bootstrap/cache database
 
+ENV PORT=8080
 EXPOSE 8080
 
-CMD php artisan migrate --force --seed && (php artisan storage:link || true) && php artisan serve --host=0.0.0.0 --port=8080
+CMD php artisan package:discover --ansi && php artisan migrate --force --seed && (php artisan storage:link || true) && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}
