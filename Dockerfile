@@ -1,8 +1,7 @@
 FROM php:8.2-fpm-alpine
 
-# Install system dependencies & PHP extensions
+# Install system packages & PHP extensions
 RUN apk add --no-cache \
-    nginx \
     nodejs \
     npm \
     git \
@@ -24,14 +23,15 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
 
-# Copy project files
+# Copy files
 COPY . .
 
-# Install dependencies and build frontend
-RUN composer install --no-dev --optimize-autoloader \
-    && npm ci \
-    && npm run build \
+# Copy environment example to .env if not exists for build step
+RUN if [ ! -f .env ]; then cp .env.example .env; fi \
     && touch database/database.sqlite \
+    && composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader \
+    && npm install \
+    && npm run build \
     && chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache /var/www/database \
     && chmod -R 775 /var/www/storage /var/www/bootstrap/cache /var/www/database
 
