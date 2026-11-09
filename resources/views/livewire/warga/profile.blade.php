@@ -72,7 +72,8 @@
         {{-- Form Sections (Profile & Password) --}}
         <div class="space-y-8">
             {{-- Form 1: Edit Profile --}}
-            <form wire:submit="updateProfile" class="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs">
+            <form wire:submit="updateProfile" method="POST" action="#" class="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs">
+                @csrf
                 <div class="border-b border-slate-100 pb-4">
                     <h2 class="font-display text-lg font-bold text-slate-900">Informasi Pribadi</h2>
                     <p class="text-xs text-slate-400">Pastikan nomor WhatsApp dan alamat domisili selalu mutakhir agar mudah dihubungi saat tindak lanjut lapangan.</p>
@@ -223,7 +224,8 @@
             </form>
 
             {{-- Form 2: Update Password --}}
-            <form wire:submit="updatePassword" class="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs">
+            <form wire:submit="updatePassword" method="POST" action="#" class="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs">
+                @csrf
                 <div class="border-b border-slate-100 pb-4">
                     <h2 class="font-display text-lg font-bold text-slate-900">Ubah Kata Sandi</h2>
                     <p class="text-xs text-slate-400">Gunakan kata sandi yang kuat dan unik untuk melindungi akun Anda.</p>

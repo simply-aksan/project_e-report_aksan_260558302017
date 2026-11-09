@@ -1,5 +1,10 @@
 <?php
 
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+    $_SERVER['SERVER_PORT'] = 443;
+}
+
 // 1. Ensure required temporary writable directories exist in serverless environment
 $tmpDirs = [
     '/tmp/views',

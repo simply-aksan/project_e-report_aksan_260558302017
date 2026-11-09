@@ -18,7 +18,8 @@
     {{-- 2-Column Grid --}}
     <div class="grid items-start gap-8 lg:grid-cols-[1fr_340px]">
         {{-- Main Form Card --}}
-        <form wire:submit="save" class="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs">
+        <form wire:submit="save" method="POST" action="#" class="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs">
+            @csrf
             <div class="mb-6 border-b border-slate-100 pb-4">
                 <h2 class="font-display text-lg font-bold text-slate-900">Formulir Laporan Warga</h2>
                 <p class="text-xs text-slate-400">Pastikan seluruh data yang dimasukkan benar dan dapat dipertanggungjawabkan.</p>

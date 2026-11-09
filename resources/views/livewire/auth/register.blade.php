@@ -11,7 +11,8 @@
         </p>
     </div>
 
-    <form wire:submit="register" class="space-y-4">
+    <form wire:submit="register" method="POST" action="#" class="space-y-4">
+        @csrf
         <div>
             <label for="name" class="mb-1.5 block text-xs font-bold text-slate-700 uppercase tracking-wider">
                 Nama Lengkap
